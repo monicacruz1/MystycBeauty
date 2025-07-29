@@ -1,1 +1,298 @@
-<h1>github pages test</h1>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mystic Beauty</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    body {
+      background-color: #fff0f5;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .navbar {
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #f1c4d7;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #cc2b7c;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu li a {
+      color: #555;
+      font-weight: 500;
+    }
+
+    .iconos a {
+      font-size: 20px;
+      margin-left: 15px;
+      color: #cc2b7c;
+    }
+
+    .buscador {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    .buscador input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .buscador button {
+      padding: 6px 10px;
+      background-color: #cc2b7c;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    .banner {
+
+  background-image: url('img/inicio/bannner.jpg');
+      background-position: center;
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+      position: relative;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.4); /* sombra oscura encima de la imagen */
+      z-index: 1;
+    }
+
+    .banner h1,
+    .banner p,
+    .banner .boton {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 18px;
+    }
+
+    .boton {
+      background-color: #cc2b7c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .destacados {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .destacados h2 {
+      color: #b32568;
+      margin-bottom: 20px;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      padding-top: 10px;
+    }
+
+    .producto {
+      background-color: #ffe8f0;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .promo {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f9c5d1;
+      padding: 40px 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .promo-texto {
+      max-width: 400px;
+      margin-right: 20px;
+    }
+
+    .promo-texto h2 {
+      font-size: 24px;
+      color: #b32568;
+    }
+
+    .promo-imagen img {
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #ffe6f0;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    .footer-contenido {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .footer-copy {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Mystic beauty</div>
+      <ul class="menu">
+        <li><a href="index.php">inicio</a></li>
+        <li><a href="productos.php">productos</a></li>
+        <li><a href="sobrenosotros.php">sobre nosotros</a></li>
+      </ul>
+      <form class="buscador" action="productos.php" method="get">
+        <input type="text" name="buscar" placeholder="Buscar productos...">
+        <button type="submit"><i class="bi bi-search"></i></button>
+      </form>
+      <div class="iconos">
+        <a href="favoritos.php"><i class="bi bi-heart"></i></a>
+        <a href="carrito.php"><i class="bi bi-cart"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>La belleza comienza contigo</h1>
+    <p>Cuidado premium para tu piel radiante</p>
+    <a href="productos.php" class="boton">Ver colección</a>
+  </section>
+
+  <!-- Productos destacados -->
+  <section class="destacados">
+    <h2>Nuestros más vendidos</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="img/inicio/base1.jpg" alt="producto 1">
+        <h3>Base glow</h3>
+      </div>
+      <div class="producto">
+        <img src="img/inicio/labial1.jpg" alt="producto 2">
+        <h3>Labial nude</h3>
+      </div>
+      <div class="producto">
+        <img src="img/inicio/joya1.jpg" alt="producto 3">
+        <h3>Set de 4 joyas</h3>
+      </div>
+      <div class="producto">
+        <img src="img/inicio/ropa1.jpg" alt="producto 4">
+        <h3>Vestido negro, corto</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promoción -->
+  <section class="promo">
+    <div class="promo-texto">
+      <h2>Oferta de primavera</h2>
+      <p>Hasta 50% de descuento en productos seleccionados</p>
+      <a href="productos.php" class="boton">Comprar ahora</a>
+    </div>
+    <div class="promo-imagen">
+      <img src="img/inicio/promo.jpg" alt="promoción">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contenido">
+      <div>
+        <h3>Mystic Beauty</h3>
+        <p>contacto@mysticbeauty.com</p>
+        <p>tel: +504 0000 0000</p>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="index.php">inicio</a></li>
+          <li><a href="productos.php">productos</a></li>
+          <li><a href="sobrenosotros.php">sobre nosotros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <div class="redes">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-tiktok"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Mystic Beauty - Todos los derechos reservados - BY Monica Cruz
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
